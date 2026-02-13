@@ -8,19 +8,26 @@ html, body {
     height: 100%;
 }
 
-.logo a svg path {
+.logo svg{
     fill: black;
+    height: 31px;
+    width: 31px;
+    margin-left:22px;
 }
 
 .categories {
-    width: 240px;
-    height: 100vh; /* full viewport height */
+    width: 400px;
+    height: 100vh; 
     background: white;
-    position: fixed; /* sticks to the left */
+    justify-content: space-between;
+    flex-direction: column;
+    position: fixed; 
     top: 0;
     left: 0;
     border-right: 1px solid #ababab;
     overflow-y: auto;
+    display: flex;
+    align-items: center;
 }
 
 ul{
@@ -29,10 +36,14 @@ ul{
 
 .sidebar-menu{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* controls spacing between menu items */
+    padding-top: 20px;
 }
 
-.sidebar-menu .li {
-  font-size: 1.5rem;
+.category .li {
+  font-size: 2rem;
   color: black;      
   vertical-align: middle; 
 }
@@ -41,27 +52,67 @@ ul{
     width: 100%;
     display: flex;
     align-items: center;
-    height: 50px;
-    padding: 0 24px;
-    font-size: 14px;
+    height: auto;
+    padding: 1px 24px;
+    font-size: 20px;
     cursor: pointer;
     font-weight: 400;
+    gap: 15px;
 }
 
 .category:hover {
     background-color: #f0f0f0;
+    border-radius: 35px;
 }
 
 .category.active {
     font-weight: 700;
 }
 
-.category.active .bi {
-    color: #000;
+.category svg{
+    height: 26px; 
+    width: 26px;
 }
 
 #post{
     color: white;
     background-color: #000;
-    border-radius: 35px;
+    border-radius: 25px;
+    width: 220px;
+    height: 50px;
+    text-align: center;
+    display: flex;            
+    align-items: center;       
+    justify-content: center;
+    font-weight: 600;
+}
+
+.categories-footer img{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
+
+.categories-footer {
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+    
+}
+
+.categories-footer p{
+    font-weight: 600;
+    font-size: 15px;
+}
+
+p span{
+    color: grey;
+}
+
+.mainbody {
+    height: calc(100vh - 56px);
+    display: flex;
+    overflow: hidden;
 }
