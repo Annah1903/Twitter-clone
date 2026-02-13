@@ -12,10 +12,6 @@ html, body {
     fill: black;
 }
 
-.bi-house{
-    color: black;
-}
-
 .categories {
     width: 240px;
     height: 100vh; /* full viewport height */
@@ -23,6 +19,7 @@ html, body {
     position: fixed; /* sticks to the left */
     top: 0;
     left: 0;
+    border-right: 1px solid #ababab;
     overflow-y: auto;
 }
 
@@ -34,7 +31,7 @@ ul{
     width: 100%;
 }
 
-.sidebar-menu .bi {
+.sidebar-menu .li {
   font-size: 1.5rem;
   color: black;      
   vertical-align: middle; 
@@ -61,4 +58,10 @@ ul{
 
 .category.active .bi {
     color: #000;
+}
+
+#post{
+    color: white;
+    background-color: #000;
+    border-radius: 35px;
 }
