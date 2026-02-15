@@ -1,0 +1,99 @@
+@media (max-width: 768px) {
+
+* {
+    scroll-behavior: smooth;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.mainbody {
+  height: 100vh;
+  display: block;
+  overflow: hidden;
+}
+
+  .content-wrapper {
+    display: block;   
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+
+.categories,
+.rightbar {
+  display: none;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.705);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 13px; 
+  justify-content: flex-start;
+}
+
+
+.star-icon {
+  position: absolute;
+  right: 15px;
+  font-size: 20px;
+}
+
+.navbar h1 {
+  font-size: 20px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.nav-profile{
+    display: inline;
+}
+
+.nav-profile img{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    margin-left: 9px;
+}
+
+.feed {
+  width: 100%;
+  background: #fff;
+  margin-left: 0px;
+  height: 100vh;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.feed-footer{
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: white;
+  border-top: 1px solid #eee;
+}
+
+.feed-footer svg{
+  width: 29px;
+  height: 29px;
+}
+
+.feed-body {
+  padding-bottom: 47px;
+  padding-top: 65px;
+}
+
+}
