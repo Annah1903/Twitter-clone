@@ -91,6 +91,18 @@ html, body {
   height: 29px;
 }
 
+.feed-footer-login {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1da1f2;
+  text-decoration: none;
+  align-self: center;
+}
+
+.feed-footer-login:hover {
+  text-decoration: underline;
+}
+
 .feed-body {
   padding-bottom: 47px;
   padding-top: 65px;

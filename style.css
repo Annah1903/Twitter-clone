@@ -12,15 +12,7 @@ body {
 
 body {
   overflow: hidden;
-  font-family:
-    system-ui,
-    -apple-system,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    Arial,
-    "Noto Sans",
-    sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 .mainbody {
@@ -96,6 +88,17 @@ ul {
   width: 26px;
 }
 
+.sidebar-login-link {
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+}
+
+.sidebar-login-link:hover {
+  color: #1da1f2;
+}
+
 #tweet {
   color: white;
   background-color: #1da1f2;
@@ -107,6 +110,141 @@ ul {
   align-items: center;
   justify-content: center;
   font-weight: 600;
+}
+
+/* Tweet compose modal popup */
+.tweet-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 16px 16px;
+  z-index: 1100;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.tweet-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tweet-modal {
+  background: white;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 600px;
+  min-height: 280px;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  animation: tweetModalIn 0.2s ease;
+}
+
+@keyframes tweetModalIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.tweet-modal-close {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 34px;
+  height: 34px;
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  color: #536471;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.tweet-modal-close:hover {
+  background: #f0f0f0;
+  color: #0f1419;
+}
+
+.tweet-modal-body {
+  display: flex;
+  gap: 12px;
+  padding: 16px 16px 12px 56px;
+}
+
+.tweet-modal-avatar {
+  flex-shrink: 0;
+}
+
+.tweet-modal-avatar img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.tweet-modal-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.tweet-modal-textarea {
+  width: 100%;
+  border: none;
+  resize: none;
+  font-size: 20px;
+  line-height: 1.4;
+  padding: 12px 0;
+  outline: none;
+  font-family: inherit;
+}
+
+.tweet-modal-textarea::placeholder {
+  color: #536471;
+}
+
+.tweet-modal-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid #eff3f4;
+  margin-top: 12px;
+}
+
+.tweet-char-count {
+  font-size: 14px;
+  color: #536471;
+}
+
+.tweet-modal-post {
+  background: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  padding: 8px 20px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tweet-modal-post:hover:not(:disabled) {
+  background: #1a91da;
+}
+
+.tweet-modal-post:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 .categories-footer img {
@@ -213,8 +351,8 @@ p span {
 .feed-details {
   display: flex;
   flex-direction: column;
-  min-height: 180px; /* or whatever minimum height you want for a tweet */
-  justify-content: flex-start; /* default, but explicit */
+  min-height: 180px; 
+  justify-content: flex-start; 
   position: relative;
 }
 
@@ -369,10 +507,10 @@ p {
   position: fixed;
   top: 0;
   right: 0;
-  width: 528px; /* same as your left sidebar width for balance */
-  height: 100vh; /* full viewport height */
+  width: 528px; 
+  height: 100vh;
   border-left: 1px solid #eee;
-  overflow-y: auto; /* if content exceeds height */
+  overflow-y: auto; 
   scrollbar-width: none;
   z-index: 1;
 }
