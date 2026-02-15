@@ -11,6 +11,8 @@ html, body {
 
 body{
     overflow: hidden;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto,
+             "Helvetica Neue", Arial, "Noto Sans", sans-serif;
 }
 
 .mainbody {
@@ -49,7 +51,7 @@ ul{
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 15px; /* controls spacing between menu items */
+    gap: 15px;
     padding-top: 20px;
 }
 
@@ -128,7 +130,7 @@ p span{
     border-right: 1px solid #eee;
     z-index: 1;
     background: #fff; 
-    margin-left: 400px;          /* take remaining width */ 
+    margin-left: 400px;          
     height: 100vh;
     overflow-y: auto;
     scrollbar-width: none;
@@ -141,12 +143,25 @@ p span{
     background-color: rgba(255, 255, 255, 0.705);
     z-index: 1;
     backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar h1{
     font-size: 20px;
     margin-left: 8px;
     font-weight: 700;
+}
+
+.star-icon {
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.star-icon:hover {
+  color:#1da1f2;
 }
 
 .feed-body{
@@ -180,7 +195,7 @@ p span{
     display: flex;
     margin-top: 5px;
     width: 100%;
-    border-bottom: 1px solid #eee; /* optional, nice separation */
+    border-bottom: 1px solid #eee; 
     padding-bottom: 10px;
 }
 
