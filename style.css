@@ -1,157 +1,164 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
+html,
+body {
+  height: 100%;
+  margin: 0;
 }
 
-body{
-    overflow: hidden;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto,
-             "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+body {
+  overflow: hidden;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    sans-serif;
 }
 
 .mainbody {
-    height: 100vh;
-    display: flex;
-    overflow: hidden;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
 }
 
-.logo svg{
-    height: 31px;
-    width: 31px;
-    margin-left:22px;
+.logo svg {
+  height: 31px;
+  width: 31px;
+  margin-left: 22px;
 }
 
 .categories {
-    width: 400px;
-    height: 100vh; 
-    background: white;
-    justify-content: space-between;
-    flex-direction: column;
-    position: fixed; 
-    top: 0;
-    left: 0;
-    border-right: 1px solid #eaeaea;
-    overflow-y: auto;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
+  width: 400px;
+  height: 100vh;
+  background: white;
+  justify-content: space-between;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-right: 1px solid #eaeaea;
+  overflow-y: auto;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
 
-.sidebar-menu{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding-top: 20px;
+.sidebar-menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 20px;
 }
 
 .category .li {
   font-size: 2rem;
-  color: black;      
-  vertical-align: middle; 
+  color: black;
+  vertical-align: middle;
 }
 
 .category {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    height: auto;
-    padding: 1px 24px;
-    font-size: 20px;
-    cursor: pointer;
-    font-weight: 400;
-    gap: 15px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: auto;
+  padding: 1px 24px;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 400;
+  gap: 15px;
 }
 
 .category:hover {
-    background-color: #f0f0f0;
-    border-radius: 35px;
+  background-color: #f0f0f0;
+  border-radius: 35px;
 }
 
 .category.active {
-    font-weight: 700;
-    color: #1DA1F2;
+  font-weight: 700;
+  color: #1da1f2;
 }
 
-.category svg{
-    height: 26px; 
-    width: 26px;
+.category svg {
+  height: 26px;
+  width: 26px;
 }
 
-#tweet{
-    color: white;
-    background-color: #1DA1F2;
-    border-radius: 25px;
-    width: 220px;
-    height: 50px;
-    text-align: center;
-    display: flex;            
-    align-items: center;       
-    justify-content: center;
-    font-weight: 600;
+#tweet {
+  color: white;
+  background-color: #1da1f2;
+  border-radius: 25px;
+  width: 220px;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
 }
 
-.categories-footer img{
-    height: 45px;
-    width: 45px;
-    border-radius: 50%;
+.categories-footer img {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
 }
 
 .categories-footer {
-    padding: 10px 24px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: auto;
-    
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
 }
 
-.categories-footer p{
-    font-weight: 600;
-    font-size: 15px;
+.categories-footer p {
+  font-weight: 600;
+  font-size: 15px;
 }
 
-p span{
-    color: grey;
+p span {
+  color: grey;
 }
+
+/*MIDDLE SECTION*/
 
 .feed {
-    width: 600px;
-    border-right: 1px solid #eee;
-    z-index: 1;
-    background: #fff; 
-    margin-left: 400px;          
-    height: 100vh;
-    overflow-y: auto;
-    scrollbar-width: none;
+  width: 600px;
+  background: #fff;
+  margin-left: 400px;
+  height: 100vh;
+  overflow-y: auto;
+  scrollbar-width: none;
 }
 
-.navbar{
-    border-bottom: 1px solid #eee;
-    width: 600px;
-    position: fixed;
-    background-color: rgba(255, 255, 255, 0.705);
-    z-index: 1;
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.navbar {
+  border-bottom: 1px solid #eee;
+  width: 600px;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.705);
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.navbar h1{
-    font-size: 20px;
-    margin-left: 8px;
-    font-weight: 700;
+.navbar h1 {
+  font-size: 20px;
+  margin-left: 8px;
+  font-weight: 700;
 }
 
 .star-icon {
@@ -161,72 +168,73 @@ p span{
 }
 
 .star-icon:hover {
-  color:#1da1f2;
+  color: #1da1f2;
 }
 
-.feed-body{
-    padding-top: 56px;
-    margin-right: 10px;
-    cursor: pointer;
+.feed-body {
+  padding-top: 56px;
+  margin-right: 10px;
+  cursor: pointer;
 }
 
-.feed-posts{
-    margin-left: 8px;
+.feed-posts {
+  margin-left: 8px;
 }
 
-.feed-posts:hover{
-    background-color: #efefef;
+.feed-posts:hover {
+  background-color: #efefef;
 }
 
 .feed-categories {
-    display: flex;
-    justify-content: space-between; 
-    min-height: 150px;  /*optional, keeps a minimum post height */
-    padding-bottom: 10px; /* space above icons */
+  display: flex;
+  justify-content: space-between;
+  min-height: 150px;
+  padding-bottom: 10px;
 }
 
-.feed-categories .profile img{
-    border-radius: 50%;
-    width: 39px;
-    height: 39px;
+.feed-categories .profile img {
+  border-radius: 50%;
+  width: 39px;
+  height: 39px;
 }
 
-.feed-posts .feed-categories{
-    display: flex;
-    margin-top: 5px;
-    width: 100%;
-    border-bottom: 1px solid #eee; 
-    padding-bottom: 10px;
+.feed-posts .feed-categories {
+  display: flex;
+  margin-top: 5px;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
 }
 
 .feed-details {
-    margin-bottom: 10px; /* space before icons */
-    display: flex;
-    flex-direction: column;
-    min-height: 180px; /* or whatever minimum height you want for a tweet */
-    justify-content: flex-start; /* default, but explicit */
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 180px; /* or whatever minimum height you want for a tweet */
+  justify-content: flex-start; /* default, but explicit */
+  position: relative;
 }
 
-.feed-details, h2, p{
-    font-size: 15px;
-    margin-left: 5px;
-    line-height: 18px;
+.feed-details,
+h2,
+p {
+  font-size: 15px;
+  margin-left: 5px;
+  line-height: 18px;
 }
 
-.feed-details h2{
-    font-weight: 700;
+.feed-details h2 {
+  font-weight: 700;
 }
 
-.feed-details p{
-    padding-top: 5px;
-    font-weight: 400;
+.feed-details p {
+  padding-top: 5px;
+  font-weight: 400;
 }
 
 .user-line {
   display: flex;
   align-items: center;
-  gap: 6px; 
+  gap: 6px;
 }
 
 .user-line h2 {
@@ -242,17 +250,17 @@ p span{
 }
 
 .menu-btn {
-  margin-left: auto; 
+  margin-left: auto;
   cursor: pointer;
-  font-size: 20px; 
+  font-size: 20px;
   color: #555;
 }
 
 .feed-icons {
-    display: flex;
-    gap: 20px;
-    margin-top: auto; 
-    padding-top: 10px;
+  display: flex;
+  gap: 20px;
+  margin-top: auto;
+  padding-top: 10px;
 }
 
 .feed-icons ul {
@@ -272,13 +280,13 @@ p span{
   display: flex;
   cursor: pointer;
   gap: 5px;
-   align-items: center; 
+  align-items: center;
 }
 
 .feed-icons svg {
-    fill: currentColor;  
-    width: 20px;            
-    height: 20px;
+  fill: currentColor;
+  width: 20px;
+  height: 20px;
 }
 
 /* COMMENT & SHARE  BUTTON*/
@@ -298,12 +306,14 @@ p span{
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
 /* hover affects BOTH icon + number */
 .reply:hover .icon-bg {
-  background: #e8f5fd; 
+  background: #e8f5fd;
 }
 
 .reply:hover {
@@ -320,11 +330,11 @@ p span{
 }
 
 .retweet:hover .icon-bg {
-  background: rgba(0, 186, 124, 0.1)
+  background: rgba(0, 186, 124, 0.1);
 }
 
 .retweet:hover {
-  color: #00BA7C;
+  color: #00ba7c;
 }
 
 /* LIKE BUTTON */
@@ -337,9 +347,148 @@ p span{
 }
 
 .like:hover .icon-bg {
-  background: rgba(249, 24, 128, 0.1); 
+  background: rgba(249, 24, 128, 0.1);
 }
 
 .like:hover {
-  color: #F91880;
+  color: #f91880;
+}
+
+/*   Right SIDEBAR    */
+
+.rightbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 528px; /* same as your left sidebar width for balance */
+  height: 100vh; /* full viewport height */
+  border-left: 1px solid #eee;
+  overflow-y: auto; /* if content exceeds height */
+  scrollbar-width: none;
+  z-index: 1;
+}
+
+
+.search-bar {
+  border: 1px solid rgb(214, 214, 214);
+  margin-top: 10px;
+  width: 350px;
+  margin-left: 19px;
+}
+
+.search-bar:hover {
+  background-color: #4b4e50;
+}
+
+.search-bar input::placeholder {
+  color: #6a7076;
+  font-size: 14px;
+}
+
+.right-cards {
+  display: grid;
+  margin: 0;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  max-width: none;
+  flex-direction: column;
+}
+
+.cards {
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+  padding: 20px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 345px;
+  gap: 10px;
+  border: 1px solid #eee;
+  height: auto;
+}
+
+h3 {
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.cards h3 i {
+  font-size: 18px;
+  color: black;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.cards li {
+  font-size: 13px;
+  color: #625f5f;
+  font-weight: 400;
+  list-style: none;
+  cursor: pointer;
+}
+
+.cards li:hover {
+  background-color: #f5f5f5;
+}
+
+.cards,
+span {
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#show {
+  color: #1da1f2;
+  font-size: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#show:hover {
+  background-color: #f5f5f5;
+}
+
+.follow {
+  display: flex;
+  cursor: pointer;
+}
+
+.follow:hover {
+  background-color: #f5f5f5;
+}
+
+.follow img {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+
+.follow-details {
+  display: flex;
+}
+
+.follow-footer{
+    width: 372px;
+}
+
+.follow-footer a, #fo-low{
+    font-size: 13px;
+    text-decoration: none;
+    justify-content: space-between;
+    margin-right: 30px;
+    color: #625f5f;
+}
+
+.follow-footer a:hover{
+    color:#4b4e50;
+}
+
+#fo-low:hover {
+  color:#4b4e50;
 }
