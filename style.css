@@ -6,10 +6,15 @@
 
 html, body {
     height: 100%;
+    margin: 0;
+}
+
+body{
+    overflow: hidden;
 }
 
 .mainbody {
-    height: calc(100vh - 56px);
+    height: 100vh;
     display: flex;
     overflow: hidden;
 }
@@ -33,6 +38,7 @@ html, body {
     overflow-y: auto;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
 
 ul{
@@ -120,17 +126,21 @@ p span{
 .feed {
     width: 600px;
     border-right: 1px solid #eee;
-    border-left: 1px solid #eee;
-    background: #fff; 
     z-index: 1;
-    margin-left: 400px;
+    background: #fff; 
+    margin-left: 400px;          /* take remaining width */ 
+    height: 100vh;
+    overflow-y: auto;
+    scrollbar-width: none;
 }
 
 .navbar{
     border-bottom: 1px solid #eee;
     width: 600px;
     position: fixed;
-    background-color: rgba(255, 255, 255, 0.942);
+    background-color: rgba(255, 255, 255, 0.705);
+    z-index: 1;
+    backdrop-filter: blur(10px);
 }
 
 .navbar h1{
@@ -139,9 +149,18 @@ p span{
     font-weight: 700;
 }
 
+.feed-body{
+    padding-top: 56px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
 .feed-posts{
     margin-left: 8px;
-    margin-top: 55px;
+}
+
+.feed-posts:hover{
+    background-color: #efefef;
 }
 
 .feed-categories {
@@ -167,7 +186,7 @@ p span{
 
 .feed-details {
     margin-bottom: 10px; /* space before icons */
-        display: flex;
+    display: flex;
     flex-direction: column;
     min-height: 180px; /* or whatever minimum height you want for a tweet */
     justify-content: flex-start; /* default, but explicit */
@@ -242,7 +261,70 @@ p span{
 }
 
 .feed-icons svg {
-    fill: #898989;  
+    fill: currentColor;  
     width: 20px;            
     height: 20px;
+}
+
+/* COMMENT & SHARE  BUTTON*/
+
+.reply {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+/* round background behind svg */
+.icon-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+/* hover affects BOTH icon + number */
+.reply:hover .icon-bg {
+  background: #e8f5fd; 
+}
+
+.reply:hover {
+  color: #1da1f2;
+}
+
+/* RETWEET BUTTON */
+
+.retweet {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.retweet:hover .icon-bg {
+  background: rgba(0, 186, 124, 0.1)
+}
+
+.retweet:hover {
+  color: #00BA7C;
+}
+
+/* LIKE BUTTON */
+
+.like {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.like:hover .icon-bg {
+  background: rgba(249, 24, 128, 0.1); 
+}
+
+.like:hover {
+  color: #F91880;
 }
